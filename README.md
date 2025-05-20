@@ -1,6 +1,4 @@
-
-
-
-
-
-
+1. I would fit the automated tests in the Recipe project development pipeline by manually running them locally before pushing code to minimize the number of pushes to a branch. You want to write code and immediately see if its valid and will past the given unit tests, because if it doesn't pass, you have to go back to the drawing board and try again. I still think there should be testing in place in terms of GitHub actions but I think being able to manually test them is better. You want to push code that you are confident in.
+2. If the function was tied to something specifically in the user interaction, you could use E2E testing to see if the function is displaying the right thing or functioning properly. However, if this is purely testing a new function that is not hooked up to the UI at all, testing if it is returning the right output is a case of Unit Testing.
+3. The difference between navigation and snapshot mode is that navigation mode tests overall performance right after and only when the page loads. While, snapshot mode analyzes a page at the current state, not necessarily right after the page loading. Snapshot mode has a strong emphasis on finding accessibility issues, but can't analyze javascript performance or DOM tree changes
+4. One thing to improve based off of the Lighthouse results is having properly sized images, for better load times. A second improvement would be adding a <meta name="viewport">, as this optimizes the app for mobile and prevents a small delay for the user. A third and last improvement would be adding an HTML lang element for the screen reader to improve accessibility. 
